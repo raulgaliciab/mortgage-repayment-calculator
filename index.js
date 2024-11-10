@@ -26,6 +26,38 @@
 
   };
 
-  function calculateMortgage(mortgageData) {
-    console.log(mortgageData);
+  function calculateMortgage({amount, term, interest_rate, mortgage_type}) {
+
+    // Variables para ambas funciones
+    const monthlyRate = (interest_rate / 100) / 12;
+    const totalNumberPayments = term * 12;
+
+    // Selecciona la función a ejecutar dependiendo del tipo de hipoteca y retorna su valor
+    return (mortgage_type === 'repayment') ? calculateRepayment() : calculateInterestOnly();
+
+    function calculateRepayment() {
+      // Calculo de la hipoteca completa (monto + intereses)
+      const repaymentMonthly = amount * (monthlyRate * ((1 + monthlyRate) ** totalNumberPayments) / ((1 + monthlyRate) ** totalNumberPayments - 1));
+      const repaymentTotal = repaymentMonthly * totalNumberPayments;
+
+      console.log(repaymentMonthly, repaymentTotal);
+      // Retorna los resultados como objeto
+      return {
+        monthlyPayment: repaymentMonthly,
+        totalPayment: repaymentTotal
+      };
+    }
+
+    function calculateInterestOnly() {
+      // Calculo de solo los intereses (mensual y total)
+      const interestOnlyMonthly = amount * monthlyRate;
+      const interestOnlyTotal = interestOnlyMonthly * totalNumberPayments;
+
+      console.log(interestOnlyMonthly, interestOnlyTotal);
+      // Retorna los resultados como objeto
+      return {
+        monthlyPayment: interestOnlyMonthly,
+        totalPayment: interestOnlyTotal
+      }
+    }
   }
