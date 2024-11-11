@@ -1,0 +1,75 @@
+:root {
+  --lime: #D8DB2F;
+  --slate-900: #133041;
+  --slate-700: #4E6E7E;
+  --slate-500: #6B94A8;
+  --slate-300: #9ABED5;
+  --slate-100: #E4F4FD;
+  --white-main: #FFFFFF;
+  --red-main: #D73328;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__container {
+  padding: 3.2rem 2.4rem;
+}
+
+.form__container h1 {
+  font-size: 2.4rem;
+  line-height: 125%;
+  color: var(--slate-900);
+}
+
+.mortgageForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.mortgageForm .btn {
+  width: 32.7rem;
+  height: 5.6rem;
+  color: var(--slate-900);
+  background-color: var(--lime);
+}
+
+/* Estilos para los Resultados */
+
+.results__container .results__empty {
+  width: 100vw;
+  height: 39rem;
+  padding: 3.2rem 2.4rem;
+  background-color: var(--slate-900);
+  justify-items: center;
+  align-items: center;
+}
+
+.results__container .results__empty h2 {
+  font-size: 2.4rem;
+  line-height: 125%;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  color: var(--white-main);
+}
+
+.results__container .results__empty p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--slate-300);
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

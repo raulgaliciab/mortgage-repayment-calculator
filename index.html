@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
 
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
@@ -16,7 +17,7 @@
     <section class="form__container">
       <h1>Mortgage Calculator</h1>
 
-      <form id="mortgageForm">
+      <form id="mortgageForm" class="mortgageForm">
         <input type="reset" value="Clear All">
 
         <label for="amount">Mortgage Amount</label>
@@ -38,19 +39,23 @@
           <label for="interest_only">Interes Only</label>
         </fieldset>
 
-        <input type="submit" value="Calculate Repayments">
+        <div class="btn">
+          <img src="./assets/images/icon-calculator.svg" alt="">
+          <input type="submit" value="Calculate Repayments">
+        </div>
       </form>
 
     </section>
     <section class="results__container">
-      <secion class="results__empty">
-        <img src="" alt="Calculator illustration">
+      <section class="results__empty">
+        <img src="./assets/images/illustration-empty.svg" alt="Calculator illustration">
         <h2>Results shown here</h2>
         <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
-      </secion>
-      <secion class="results__filled">
+      </section>
+      <section class="results__filled">
         <h2>Your results</h2>
-        <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and
+        <p>Your results are shown below based on the information you provided. To adjust the results, edit the form
+          and
           click “calculate repayments” again.</p>
         <div>
           <span>Your monthly repayments</span>
@@ -58,7 +63,7 @@
           <span>Total you'll repay over the term</span>
           <p>539,322.94</p>
         </div>
-      </secion>
+      </section>
     </section>
   </main>
 
