@@ -18,31 +18,42 @@
       <h1>Mortgage Calculator</h1>
 
       <form id="mortgageForm" class="mortgageForm">
-        <input type="reset" value="Clear All">
+        <input type="reset" value="Clear All" class="input-reset">
 
         <label for="amount">Mortgage Amount</label>
-        <input type="number" id="amount" name="amount" required>
+        <div class="input-box">
+          <span>£</span>
+          <input type="number" id="amount" name="amount" step="0.01" required>
+        </div>
 
         <label for="term">Mortgage Term</label>
-        <input type="number" id="term" name="term" required>
+        <div class="input-box">
+          <input type="number" id="term" name="term" required>
+          <span>years</span>
+        </div>
 
         <label for="interest_rate">Interes Rate</label>
-        <input type="number" name="interest_rate" id="interest_rate" required>
+        <div class="input-box">
+          <input type="number" name="interest_rate" id="interest_rate" step="0.01" required>
+          <span>%</span>
+        </div>
 
         <fieldset>
           <legend>Mortgage Type</legend>
 
-          <input type="radio" id="repayment" name="mortgage_type" value="repayment" required>
-          <label for="repayment">Repayment</label>
+          <div class="input-radio">
+            <input type="radio" id="repayment" name="mortgage_type" value="repayment" required>
+            <label for="repayment">Repayment</label>
+          </div>
 
-          <input type="radio" id="interest_only" name="mortgage_type" value="interes_only" required>
-          <label for="interest_only">Interes Only</label>
+          <div class="input-radio">
+            <input type="radio" id="interest_only" name="mortgage_type" value="interes_only" required>
+            <label for="interest_only">Interes Only</label>
+          </div>
         </fieldset>
 
-        <div class="btn">
-          <img src="./assets/images/icon-calculator.svg" alt="">
-          <input type="submit" value="Calculate Repayments">
-        </div>
+        <button type="submit" class="btn"><img src="./assets/images/icon-calculator.svg"
+            alt="Icono de calculadora">Calculate Repayments</button>
       </form>
 
     </section>
