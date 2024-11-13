@@ -18,7 +18,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-family: 'Plus Jakarta Sans', Arial;
 }
 
 main {
@@ -229,13 +229,20 @@ input[type=number] {
 }
 
 .results-data__container .results-data__monthly {
-  font-size: 5.6rem;
+  margin-top: 0.8rem;
+  font-size: 4.8rem;
   font-weight: bold;
   line-height: 125%;
   color: var(--lime);
 }
 
+.results-data__container hr {
+  margin: 1.6rem 0;
+  border: 0.5px solid var(--slate-700);
+}
+
 .results-data__container .results-data__total {
+  margin-top: 0.8rem;
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 125%;
