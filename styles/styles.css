@@ -189,6 +189,7 @@ input[type=number] {
 /* Resultados con data */
 
 .results__filled {
+  display: none;
   width: 100vw;
   height: 45.5rem;
   padding: 3.2rem 2.4rem;
