@@ -1,0 +1,46 @@
+@media ((min-width: 768px) and (max-width: 1280px)) {
+
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 2.4rem 0;
+    background-color: var(--slate-300);
+  }
+
+  main {
+    width: 90%;
+    border-radius: 2.4rem;
+    overflow: hidden;
+  }
+
+  .form__container {
+    padding: 4rem;
+  }
+
+  .mortgageForm .input-reset {
+    position: relative;
+    top: -3.8rem;
+    align-self: flex-end;
+  }
+
+  .form__mediaquery {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__mediaquery--item {
+    width: 48%;
+  }
+
+  .input-box .input-icon:nth-child(2) {
+    max-width: 40px;
+  }
+
+  .input-box .input-years {
+    max-width: 60px;
+  }
+
+  .results__container .results__empty {
+    padding: 4rem;
+  }
+}

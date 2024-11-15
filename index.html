@@ -7,6 +7,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/tablet.css">
+  <link rel="stylesheet" href="./styles/desktop.css">
 
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
@@ -17,26 +19,34 @@
     <section class="form__container">
       <h1>Mortgage Calculator</h1>
 
-      <form id="mortgageForm" class="mortgageForm">
+      <form id="mortgageForm" class="mortgageForm" method="POST">
         <input type="reset" value="Clear All" class="input-reset">
 
         <label for="amount">Mortgage Amount</label>
         <div class="input-box">
-          <span>£</span>
+          <span class="input-icon">£</span>
           <input type="number" id="amount" name="amount" step="0.01" required>
         </div>
 
-        <label for="term">Mortgage Term</label>
-        <div class="input-box">
-          <input type="number" id="term" name="term" required>
-          <span>years</span>
+        <div class="form__mediaquery">
+          <div class="form__mediaquery--item">
+            <label for="term" class="mortgage-term-label">Mortgage Term</label>
+            <div class="input-box">
+              <input type="number" id="term" name="term" required>
+              <span class="input-years">years</span>
+            </div>
+          </div>
+
+          <div class="form__mediaquery--item">
+            <label for="interest_rate" class="interest-rate-label">Interest Rate</label>
+            <div class="input-box">
+              <input type="number" name="interest_rate" id="interest_rate" step="0.01" required>
+              <span class="input-icon">%</span>
+            </div>
+          </div>
         </div>
 
-        <label for="interest_rate">Interes Rate</label>
-        <div class="input-box">
-          <input type="number" name="interest_rate" id="interest_rate" step="0.01" required>
-          <span>%</span>
-        </div>
+
 
         <fieldset>
           <legend>Mortgage Type</legend>
@@ -48,7 +58,7 @@
 
           <div class="input-radio">
             <input type="radio" id="interest_only" name="mortgage_type" value="interes_only" required>
-            <label for="interest_only">Interes Only</label>
+            <label for="interest_only">Interest Only</label>
           </div>
         </fieldset>
 
