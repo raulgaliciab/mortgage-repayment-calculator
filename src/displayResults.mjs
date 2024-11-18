@@ -18,5 +18,5 @@ resultsTotalHTML.innerHTML = `£${resultsTotalStyled}`;
 
 // Cambio de display
 resultsEmptyDisplay.style.display = "none";
-resultsFilledDisplay.style.display = "block";
+resultsFilledDisplay.style.display = "flex";
 }
