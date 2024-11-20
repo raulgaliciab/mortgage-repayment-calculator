@@ -60,6 +60,7 @@ main {
   line-height: 150%;
   color: var(--slate-700);
 }
+/* Input radio */
 
 .mortgageForm fieldset {
   border: none;
@@ -76,6 +77,16 @@ fieldset .input-radio {
   color: var(--slate-900);
   border: 1px solid var(--slate-500);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+fieldset .input-radio input {
+  margin: 0 0.8rem;
+  cursor: pointer;
+}
+
+fieldset .input-radio label {
+  cursor: pointer;
 }
 
 .mortgageForm legend {
@@ -109,6 +120,7 @@ fieldset .input-radio {
   font-weight: bold;
   color: var(--slate-900);
   border: none;
+  cursor: pointer;
 }
 
 input::-webkit-outer-spin-button,
@@ -154,6 +166,7 @@ input[type=number] {
   background: none;
   border: none;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Botón Calculate Repayments */
@@ -267,4 +280,40 @@ input[type=number] {
   font-weight: bold;
   line-height: 125%;
   color: var(--white-main);
+}
+
+/* Pseudo-classes */
+
+/* Hover */
+
+fieldset .input-radio:hover {
+  border: 1px solid var(--lime);
+}
+
+.mortgageForm .btn:hover {
+  opacity: 0.5;
+}
+
+/* Active */
+
+.mortgageForm .input-box:active {
+  border: 1px solid var(--lime);
+}
+
+/* Focus */
+
+.mortgageForm .input-box input:focus {
+  outline: none;
+}
+
+.mortgageForm .input-box input:focus~span {
+  background-color: var(--lime);
+}
+
+.mortgageForm .input-box span:has(~input:focus) {
+  background-color: var(--lime);
+}
+
+.mortgageForm .input-box:has(input:focus) {
+  border: 1px solid var(--lime);
 }
